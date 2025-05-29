@@ -1,8 +1,8 @@
-import { useState } from 'react';
-import './App.css';
+import { useState } from "react";
+import "./App.css";
 
 function App() {
-  const [password, setPassword] = useState('');
+  const [password, setPassword] = useState("");
   const [showPassword, setShowPassword] = useState(false);
 
   const togglePasswordVisibility = () => {
@@ -10,28 +10,37 @@ function App() {
   };
 
   return (
-    <div className="container mt-5 text-center">
-      <h1 className="mb-4">Password Visibility Toggle</h1>
-      <div className="mb-4">
-        <label htmlFor="password" className="form-label">
-          Password:
-        </label>
-        <div className="mb-4">
-          <input
-            type={showPassword ? 'text' : 'password'}
-            className="form-control w-50 mx-auto"
-            id="password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-          />
-          <button
-            class="btn btn-primary mt-2 w-50"
-            
-            type="button"
-            onClick={togglePasswordVisibility}
+    <div className="App">
+      <div>
+        <header className="App-header">
+          <h1>Password Visibility Toggle</h1>
+        </header>
+      </div>
+      <div className="container mt-5 text-center">
+        <div className="mb-4 ">
+          <label
+            htmlFor="password"
+            className="form-label"
+            style={{  }}
           >
-            {showPassword ? 'Hide' : 'Show'}
-          </button>
+            Password:
+          </label>
+          <div className="mb-4">
+            <input
+              type={showPassword ? "text" : "password"}
+              className="animated-input"
+              id="password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+            />
+            <button
+              className="animated-btn btn btn-dark mt-2 w-50"
+              type="button"
+              onClick={togglePasswordVisibility}
+            >
+              {showPassword ? "Hide" : "Show"}
+            </button>
+          </div>
         </div>
       </div>
     </div>

@@ -1,0 +1,135 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Playfair+Display+SC:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&family=Playwrite+FR+Trad:wght@100..400&family=Yeseva+One&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+}
+
+body {
+    background-image: linear-gradient(to bottom, #000000, #272727 50%);
+    background-size: cover;
+    color: #ffffff;
+    font-size: 16px;
+    line-height: 1.6;
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    padding: 20px;
+    background-image: linear-gradient(to bottom right,
+            rgba(29, 28, 28, 0.8),
+            rgba(29, 28, 28, 0.6));
+    border: 1px solid #474446;
+    box-shadow: 0 2px 20px rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+}
+
+.container {
+    /* ...existing code... */
+    animation: fadeSlideIn 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@keyframes fadeSlideIn {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+header {
+    text-align: center;
+    background: linear-gradient(to right,
+            rgba(39, 38, 38, 0.882),
+            rgb(43, 42, 42));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-top: 5rem;
+    margin-bottom: 2rem;
+}
+
+h1 {
+    font-size: 3rem;
+    font-family: "Dancing Script", cursive;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #4e4a4a;
+    font-size: 2.2rem;
+    font-family: "Dancing Script", cursive;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+}
+
+.animated-bg {
+    transition: background-color 1s;
+}
+
+.animated-input {
+    width: 50%;
+    padding: 5px 16px;
+    font-size: 1.1rem;
+    font-family: "Caveat", cursive;
+  font-optical-sizing: auto;
+  font-weight: 100;
+    border: 2px solid #474446;
+    border-radius: 0.5rem;
+    background: #0000;
+    color: #463f3f;
+    outline: none;
+    transition: border-color 0.3s, box-shadow 0.3s, background 0.3s;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    margin: 0 auto;
+    display: block;
+}
+
+.animated-input:focus {
+    border-color: hsla(0, 1%, 15%, 0.884);
+    box-shadow: 0 0 8px #c5c5c444;
+    background: #292929;
+}
+
+.animated-btn {
+    transition: background 0.3s, transform 0.2s, box-shadow 0.3s;
+    background: #474446;
+    color: #fff;
+    border: 1px solid #474446;
+    border-radius: 0.5rem;
+    padding: 8px 20px;
+      font-family: "Playwrite FR Trad", cursive;
+    font-size: 1rem;
+ font-family: "Caveat", cursive;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+    box-shadow: 0 2px 26px rgba(255, 255, 255, 0.1);
+    cursor: pointer;
+}
+
+.animated-btn:hover {
+    background: rgba(39, 38, 38, 0.884);
+    color: #353030;
+    transform: translateY(-3px) scale(1.04);
+    box-shadow: 0 6px 24px #fffefd44;
+}
+
+.animated-btn:active {
+    transform: scale(0.98);
+    background: #1b1b1a;
+}
